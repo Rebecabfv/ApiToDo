@@ -25,12 +25,12 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(value = IllegalArgumentException.class)
-    public ResponseEntity<ErrorDto> handleException(Exception e) {
+    public ResponseEntity<ErrorDto> handleException(IllegalArgumentException e) {
         log.error("Argumento ilegal: " + e);
         var erroDto =
             ErrorDto.builder()
                     .mensagem(e.getMessage())
-                    .codigoErro(999)
+                    .codigoErro(HttpStatus.BAD_REQUEST.value())
                     .build();
         return ResponseEntity.status(HttpStatus.CONFLICT).body(erroDto);
     }

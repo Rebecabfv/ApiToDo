@@ -25,7 +25,7 @@ public class TodoEntity {
     @NotBlank(message="Descricao nao deve ficar vazia")
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)  //FetchType.EAGER
+    @ManyToOne(fetch = FetchType.LAZY)
     private UserEntity userEntity;
 
     @ManyToMany(fetch = FetchType.LAZY)

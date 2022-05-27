@@ -8,12 +8,9 @@ public interface CategoryService {
 
     List<CategoriaDto> retrieveAll();
 
-
     void save(CategoriaDto dto);
 
-
     void delete(long id);
-
 
     void update(CategoriaDto dto);
 }

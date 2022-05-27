@@ -17,13 +17,10 @@ public class TodoDto {
 
     private Long id;
 
-    //@NotBlank
-
     private String username;
 
     @NotBlank
     private String description;
-
 
     @JsonCreator
     public TodoDto(@JsonProperty final Long id,
