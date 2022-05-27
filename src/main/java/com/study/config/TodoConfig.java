@@ -9,7 +9,7 @@ public class TodoConfig {
 
     @Bean
     public RestTemplate restTemplate() {
-        return new RestTemplate(); //REST client
+        return new RestTemplate();
     }
 
 }
